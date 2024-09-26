@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+    <ion-title>Resultados de Votación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container-fluid">
+    <!-- Mostrar solo el gráfico de torta si el tipo es 'lindas' -->
+    <div class="chart-container" *ngIf="tipo === 'lindas'">
+      <h4>Cosas lindas del edificio</h4>
+      <br><br><br>
+      <canvas id="pieChart"></canvas>
+    </div>
+
+    <!-- Mostrar solo el gráfico de barra si el tipo es 'feas' -->
+    <div class="chart-container" *ngIf="tipo === 'feas'">
+      <h4>Cosas feas del edificio</h4>
+      <br><br><br><br><br><br>
+      
+      <canvas id="barChart"></canvas>
+    </div>
+  </div>
+
+    <!-- Sección para mostrar la foto seleccionada -->
+    <div *ngIf="fotoSeleccionada" class="photo-container">
+      <img [src]="fotoSeleccionada.url" class="img-fluid" alt="Foto seleccionada" />
+      <p>Subida por: {{ fotoSeleccionada.user }}</p>
+      <p>Votos: {{ fotoSeleccionada.votos }}</p>
+    </div>
+   
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="custom-footer">
+    <ion-buttons slot="start">
+      <ion-button (click)="goTo('/home')" class="footer-button" style="font-size: 15px;">Ir a inicio</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

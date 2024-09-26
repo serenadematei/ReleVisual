@@ -1,0 +1,14 @@
+<ion-header>
+
+    <ion-button expand="block" (click)="goTo('/home')">Volver a inicio</ion-button>
+
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="container">
+    <h1>Cosas feas del edificio</h1>
+    <ion-button expand="block" (click)="takePicture()">Tomar una Foto</ion-button>
+    <ion-button expand="block" (click)="goToListadoFotos('feas')">Ver todas las fotos</ion-button>
+    <ion-button expand="block" (click)="goToResultados('feas')">Ver resultados</ion-button>
+  </div>
+</ion-content>

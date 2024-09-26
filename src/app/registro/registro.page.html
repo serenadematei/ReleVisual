@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registrar Nuevo Usuario</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input [(ngModel)]="correo" type="email" name="correo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Clave</ion-label>
+        <ion-input [(ngModel)]="clave" type="password" name="clave"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Perfil</ion-label>
+        <ion-select [(ngModel)]="perfil" name="perfil">
+          <ion-select-option value="admin">Admin</ion-select-option>
+          <ion-select-option value="invitado">Invitado</ion-select-option>
+          <ion-select-option value="usuario">Usuario</ion-select-option>
+          <ion-select-option value="tester">Tester</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Sexo</ion-label>
+        <ion-select [(ngModel)]="sexo" name="sexo">
+          <ion-select-option value="femenino">Femenino</ion-select-option>
+          <ion-select-option value="masculino">Masculino</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button expand="full" (click)="register()">Registrar</ion-button>
+      <ion-text color="danger">{{ errorMessage }}</ion-text>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

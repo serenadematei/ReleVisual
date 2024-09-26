@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #e0f7fa; /* Fondo color celeste claro */
+  }
+  
+  h1 {
+    color: #00796b;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  ion-button {
+    --background: #00796b;
+    --background-hover: #004d40;
+    --color: white;
+  }
+
+
+
+  .custom-alert .alert-wrapper {
+    --background: #4caf50 !important; /* Cambia este color por el que desees */
+    --color: white !important; /* Color del texto */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
+  
+  .custom-alert .alert-button {
+    --color: #ffffff !important; /* Color del texto del botón */
+    --background: transparent !important; /* Fondo del botón */
+  }
+
+  .custom-toast {
+    --background: #2b862e; /* Fondo verde */
+    --color: white; /* Texto en blanco */
+    font-size: 16px; /* Ajusta el tamaño del texto si es necesario */
+    border-radius: 12px; /* Bordes redondeados */
+  }
+
+
+    

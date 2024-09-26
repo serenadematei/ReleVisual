@@ -1,0 +1,47 @@
+<ion-content class="ion-padding"></ion-content>
+  <div class="login-container">
+    <ion-card class="login-card">
+      <ion-card-header>
+        <ion-card-title class="card-title">Iniciar sesión</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+
+
+        <ion-item class="input-item">
+          <ion-input [(ngModel)]="email" name="email" type="text" placeholder=" Usuario"></ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+          <ion-input [(ngModel)]="password" name="password" type="password" placeholder=" Contraseña"></ion-input>
+        </ion-item>
+        
+
+        <div class="user-buttons-container">
+          <button class="avatar-button" (click)="usuariosPredeterminados('admin')">
+            <img src="assets/avatar1.jpg" alt="Usuario 1">
+          </button>
+          <button class="avatar-button" (click)="usuariosPredeterminados('invitado')">
+            <img src="assets/avatar4.jpg" alt="Usuario 2">
+          </button>
+          <button class="avatar-button" (click)="usuariosPredeterminados('usuario')">
+            <img src="assets/avatar3.jpg" alt="Usuario 3">
+          </button>
+          <button class="avatar-button" (click)="usuariosPredeterminados('anonimo')">
+            <img src="assets/avatar2.jpg" alt="Usuario 4">
+          </button>
+          <button class="avatar-button" (click)="usuariosPredeterminados('tester')">
+            <img src="assets/avatar5.png" alt="Usuario 3">
+          </button>
+        </div>
+
+       
+        <button expand="full" (click)="login()" class="login-button">Aceptar</button>
+
+     
+        <ion-text color="danger" *ngIf="errorMessage">
+          <p><br>{{ errorMessage }}</p>
+        </ion-text>
+
+      </ion-card-content>
+    </ion-card>
+  </div>

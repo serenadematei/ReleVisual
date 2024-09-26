@@ -1,0 +1,70 @@
+
+  .splash-animated-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #9f94c7; // Fondo blanco o cualquier color de tu preferencia
+  }
+  
+  .splash-icon {
+    width: 250px;
+    height: 250px;
+    animation: fadeIn 1.5s ease-in-out forwards, scaleUp 1.5s ease-in-out forwards;
+  }
+  
+  .splash-name {
+    margin-top: 15px;
+    font-size: 35px;
+    color: black;
+    animation: slideInFromLeft 2s ease-out; 
+  }
+  
+  .splash-division {
+    margin-top: 12px;
+    font-size: 35px;
+    color: black;
+    animation: slideInFromRight 2s ease-out;  // Aparece después de 2.5s
+  }
+
+    
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animación de derecha a izquierda */
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

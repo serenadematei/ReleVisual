@@ -1,0 +1,35 @@
+ion-content {
+    --background: #d6cff1; 
+  }
+ion-title{
+  font-size: 15px;
+}
+
+/* Estilo para el header */
+.custom-header {
+    --background: #4a4e69; /* Color de fondo del header */
+    --color: #f2e9e4; /* Color del texto */
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  }
+  
+  /* Estilo para el footer */
+  .custom-footer {
+    --background: #656a8b;  /* Color de fondo del footer */
+    --color: #f2e9e4; /* Color del texto */
+    border-top: 2px solid #9a8c98; /* Borde superior para separarlo visualmente */
+  }
+  
+  /* Estilo para el botón en el footer */
+  .footer-button {
+    --background-activated: #b5a5f1;  /* Fondo cuando se presiona el botón */
+    --color: #ffffff; /* Color del texto del botón */
+    font-weight: bold;
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 6px 12px; /* Espaciado interno del botón */
+  }
+  
+  /* Hover y focus para darle más interactividad */
+  .footer-button:hover {
+    --background: #c9ada7; /* Cambio de color al pasar el cursor */
+  }

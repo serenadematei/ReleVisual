@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Álbum de Fotos - fotos {{tipo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container-fluid">
+    <div class="feed-container">
+      <!-- Feed Items -->
+      <div *ngFor="let foto of fotos" class="feed-item">
+        <!-- Contenedor de la foto -->
+        <div class="photo-container">
+          <img [src]="foto.url" class="img-fluid" alt="Foto" />
+        </div>
+
+        <!-- Detalles debajo de la foto -->
+        <div class="details-container">
+          <div class="user-info">
+            <p class="user">{{ foto.user }}</p>
+            <p class="timestamp">{{ foto.timestamp.toDate() | date:'medium' }}</p>
+          </div>
+          <div class="votes-container">
+            <p class="votos">Votos: {{ foto.votos }}</p>
+            <ion-button
+              class="vote-button"
+              (click)="votar(foto)"
+              [color]="foto.yaVotado ? 'danger' : 'primary'"
+              fill="clear"
+              size="small">
+              {{ foto.yaVotado ? 'Quitar voto' : 'Dar voto' }}
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="custom-footer">
+    <ion-buttons slot="start">
+      <ion-button (click)="goTo('/home')" class="footer-button" style="font-size: 15px;">Ir a inicio</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
+
+<!--<ion-card *ngIf="fotos.length === 0">
+  <ion-card-header>
+    <ion-card-title>No hay fotos disponibles</ion-card-title>
+  </ion-card-header>
+</ion-card>-->
